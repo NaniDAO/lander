@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌘</text></svg>"
+    />
+    <title>𝘕a𝘕ι</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+      body {
+        background-color: #000;
+        color: #fff;
+        font-family: "Noto Sans JP", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        border: 1px solid #333;
+        padding: 40px;
+        position: relative;
+        z-index: 2;
+      }
+      h1 {
+        text-align: center;
+        font-size: 10vw;
+        margin-bottom: 0.5rem;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #ddd;
+        opacity: 0.85;
+        cursor: pointer;
+      }
+      h1 a {
+        text-decoration: none;
+        color: inherit;
+        -webkit-text-stroke-width: inherit;
+        -webkit-text-stroke-color: inherit;
+        opacity: inherit;
+        transition: transform 0.6s;
+        display: inline-block;
+      }
+      h1:hover a {
+        transform: scaleX(-1);
+      }
+      .tagline {
+        text-align: center;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: #fff;
+        opacity: 0.1;
+        margin-bottom: 2rem;
+      }
+      .diagram {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      svg text {
+        font-size: 0.7rem;
+        fill: #fff;
+      }
+      p {
+        margin-bottom: 1rem;
+        text-align: justify;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        text-decoration: underline wavy blue 2px;
+      }
+      .section-header {
+        font-weight: bold;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff0000, 0 0 15px #00ffff,
+          1px 1px 2px #00ff15;
+        font-style: italic;
+      }
+      .highlight {
+        color: #fff;
+        text-shadow: 0 0 5px #fff, 0 0 10px #ff0000, 0 0 15px #00ffff,
+          1px 1px 2px #00ff15;
+        font-weight: normal;
+        text-decoration: underline wavy blue;
+      }
+      #cmd-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .cmd {
+        position: absolute;
+        font-size: 11px;
+        animation: flicker 3s infinite ease-in-out;
+        opacity: 0.5;
+      }
+      @keyframes flicker {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+      #x-link {
+        position: fixed;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        z-index: 3;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+      #x-link svg {
+        width: 20px;
+        height: 20px;
+        fill: white;
+      }
+      #x-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      #nani-link {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-family: monospace;
+        z-index: 3;
+      }
+      #nani-link:hover {
+        text-decoration: underline wavy blue 2px;
+      }
+      .highlight-send {
+        background-color: #00ff00;
+      }
+      .highlight-swap {
+        background-color: #ffd700;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+        .container {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 15vw;
+        }
+        .tagline {
+          font-size: 1.2rem;
+        }
+        svg {
+          width: 300px;
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <a href="https://nani.ooo/">𝘕α𝘕ι</a>
+      </h1>
+      <p class="tagline">
+        <a href="https://en.wikipedia.org/wiki/NaN" target="_blank">NaN</a>
+        interface
+      </p>
+
+      <div class="diagram">
+        <svg width="420" height="200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke-width="2">
+            <!-- Smart Account (Hexagon) -->
+            <polygon
+              points="45,50 60,30 90,30 105,50 90,70 60,70"
+              stroke="#0000FF"
+            />
+            <text
+              x="75"
+              y="55"
+              fill="#fff"
+              text-anchor="middle"
+              style="font-size: 0.8rem"
+            >
+              NSA
+            </text>
+            <text
+              x="75"
+              y="85"
+              fill="#fff"
+              text-anchor="middle"
+              style="font-size: 0.5rem"
+              opacity="0.4"
+            >
+              nani smart account
+            </text>
+
+            <!-- Large Open Language Model (Double Circle with LOL) -->
+            <circle cx="215" cy="50" r="20" stroke="#FF0000" />
+            <circle cx="235" cy="50" r="20" stroke="#FF0000" />
+            <text fill="#fff" style="font-size: 0.8rem">
+              <tspan x="204" y="55">L</tspan>
+              <tspan x="220" y="55">O</tspan>
+              <tspan x="238" y="55">L</tspan>
+            </text>
+            <text
+              x="225"
+              y="85"
+              fill="#fff"
+              text-anchor="middle"
+              style="font-size: 0.5rem"
+              opacity="0.4"
+            >
+              large open language
+            </text>
+
+            <!-- Intents Engine (Circle) -->
+            <circle cx="360" cy="50" r="20" stroke="#00FF00" />
+            <text
+              x="360"
+              y="55"
+              fill="#fff"
+              text-anchor="middle"
+              style="font-size: 0.8rem"
+            >
+              TIE
+            </text>
+            <text
+              x="360"
+              y="85"
+              fill="#fff"
+              text-anchor="middle"
+              style="font-size: 0.5rem"
+              opacity="0.4"
+            >
+              the intents engine
+            </text>
+
+            <!-- Lines connecting them -->
+            <line
+              x1="105"
+              y1="50"
+              x2="195"
+              y2="50"
+              stroke="#fff"
+              stroke-dasharray="4"
+            />
+            <line
+              x1="255"
+              y1="50"
+              x2="340"
+              y2="50"
+              stroke="#fff"
+              stroke-dasharray="4"
+            />
+          </g>
+        </svg>
+      </div>
+
+      <p class="section-header">the challenge, the opportunity</p>
+
+      <p>
+        Crypto faces a paradox in its value. While the worth of cryptographic
+        consensus and finality has been proven over several critical market
+        cycles, commercial access to crypto assets has been challenged by the
+        inherent risks that make them unique in the first place: they are
+        secured purely by code. Transactions are irreversible and considered
+        correct by default (code-is-law). More ownership with more risk.
+        Economic abstraction is needed.
+      </p>
+
+      <p>
+        So we are presented with this challenge and resulting opportunity. To
+        bring these assets to more consumers in ways that don't sacrifice
+        crypto's inherent value, by offering useful automations and safer
+        self-custody with <a href="https://huggingface.co/NaniDAO">AI</a> and
+        not just more people holding your keys. To allow crypto to expand into
+        everyday transactions with onchain agents. Maintaining the intents of
+        users as full owners, in a holistic, intelligent system, accessible by
+        anyone with an internet connection. Not a number interface: an operating
+        system for money using natural language. This is our premise in
+        constructing <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a> for
+        onchain agents.
+      </p>
+
+      <p class="section-header">the solution, as an operating system</p>
+
+      <p>
+        To elaborate, we conceive of the onchain agent as an extension of the
+        user in the paradigmatic
+        <a href="https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem"
+          >principal-agent</a
+        >
+        relationship. These agents should understand user intents, and the user
+        should understand their solutions. Preferably, in natural language, both
+        for their instruction and execution. If we can express and map
+        transactional intents to the deterministic outputs of smart contracts
+        like this, we can actually achieve secure guardrails for people to
+        delegate crypto ownership tasks, starting with common transaction routes
+        and simple modules, in the form of commands.
+      </p>
+
+      <p class="section-header">intents engine</p>
+
+      <p>
+        To begin, onchain routes to assist users in completing intents are
+        stored in a router smart contract, the Intents Engine (<a
+          href="https://intentsengine.eth.limo/"
+          class="highlight"
+          >IE</a
+        >).
+        <a href="https://intentsengine.eth.limo/" class="highlight">IE</a>
+        simplifies and secures existing agent toolkits for crypto by providing
+        onchain guarantees related to transaction previews and command
+        execution.
+      </p>
+
+      <p>
+        For example, the intent to send an asset like a token is sent onchain as
+        a command using conventional syntax, such as
+        <span class="highlight-send">send 1 ETH to alice</span> or
+        <span class="highlight-swap">swap USDC for 1 ETH</span>. The action of
+        "send" is mapped to the relevant contract interface for the given asset
+        (e.g., "ETH"), whether it be ERC20 or native, as well as the address and
+        decimal convention of the asset. The user is guaranteed that their
+        instructions will be delivered exactly as confirmed in simple english.
+        Over time, more function calls will be added to
+        <a href="https://intentsengine.eth.limo/" class="highlight">IE</a>, or
+        deployed separately, such as
+        <a href="https://github.com/NaniDAO/pricefeed">price feeds</a> and other
+        oracles. But for immediate purposes,
+        <a href="https://intentsengine.eth.limo/" class="highlight">IE</a>
+        services the common needs for agents and crypto users to get reliable
+        token labels, usernames (through
+        <a href="https://ens.domains/">ENS</a> and complimentary namespaces),
+        and prices. From this starting point, a tangible feedback loop of
+        prompting between user and agent can be initiated on
+        <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a> to manage their
+        finances faster and more personally than what is possible with
+        traditional services.
+      </p>
+
+      <p class="section-header">smart accounts</p>
+
+      <p>
+        Agents provide far more than just an interface to use crypto: they can
+        become active participants in helping plan and program around it. A
+        <a href="https://github.com/NaniDAO/accounts" class="highlight"
+          >"smart account"</a
+        >
+        is a wallet that users can run arbitrary code on by using a smart
+        contract. This customizability makes
+        <a href="https://github.com/NaniDAO/accounts" class="highlight"
+          >smart accounts</a
+        >
+        more secure and useful than ordinary wallets, or
+        <a
+          href="https://ethereum.stackexchange.com/questions/5828/what-is-an-eoa-account"
+          >EOAs</a
+        >. Where EOAs offer massive accessibility to improve against legacy
+        options (anyone online can get onboarded),
+        <a href="https://github.com/NaniDAO/accounts" class="highlight"
+          >smart accounts</a
+        >
+        improve on EOAs by matching and further improving upon the UX of banking
+        by allowing applications to be built around self-custody (such as hybrid
+        custody arrangements where control is shared or governed). They do this
+        by providing an open canvas against which users can program access to
+        their own money.
+      </p>
+
+      <p>
+        Therefore, to benefit most from agents, crypto users should employ a
+        <a href="https://github.com/NaniDAO/accounts" class="highlight"
+          >smart account</a
+        >
+        and customize it to fit their security needs and frequent commands.
+        Future-looking orders and permissions, such as the right to spend
+        certain amounts, or to call certain contracts, can also be engaged with
+        <a href="https://github.com/NaniDAO/accounts" class="highlight"
+          >smart accounts</a
+        >
+        by using modules and other add-ons curated and offered through
+        <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a>.
+      </p>
+
+      <p class="section-header">dao governance</p>
+
+      <p>
+        Solutions for intents can be judged on objective criteria, such as gas
+        efficiency and output amounts. The more subjective aspects of managing
+        crypto assets, such as labelling and safety parameters, are frequently
+        open-ended and difficult to add to deterministic workflows familiar to
+        smart contracts. While
+        <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a> alpha has been
+        deployed under the multisignature keys of
+        <a href="https://kali.gg/" class="highlight">KALI</a>, the usefulness of
+        the
+        <a href="https://intentsengine.eth.limo/" class="highlight">IE</a>
+        router, onchain price and other agentic tools, will depend on how they
+        can scale beyond us.
+        <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a> users are invited
+        to
+        <a
+          href="https://basescan.org/address/0xda000000000000d2885f108500803dfbaab2f2aa#code"
+          >join governance</a
+        >
+        of <a href="https://intentsengine.eth.limo/" class="highlight">IE</a>,
+        and the <a href="https://nani.ooo/" class="highlight">𝘕a𝘕ι</a> onchain
+        agent infra.
+      </p>
+
+      <p class="section-header">the future, more or less, as we know it</p>
+
+      <p>
+        In five years, we expect that most financial transactions will be
+        mediated by agents running on large open language (<a
+          href="https://huggingface.co/NaniDAO"
+          class="highlight"
+          >LOL</a
+        >) models, settled on blockchains, secured by cryptography and economic
+        incentives provided by crypto assets. This just tracks with the internet
+        so far in our modest opinion. In our estimation, too, language is the
+        natural interface for this kind of more personal ownership, and these
+        kinds of agents, if we are to replicate and improve on how we direct our
+        own affairs and finance. Simplicity feels underrepresented in this
+        domain. So we will proceed with this onchain agent infra:
+        <a href="https://github.com/NaniDAO/accounts" class="highlight">NSA</a>,
+        <a href="https://huggingface.co/NaniDAO" class="highlight">LOL</a>, and
+        <a href="https://intentsengine.eth.limo/" class="highlight">TIE</a>, and
+        build on what works.
+      </p>
+    </div>
+    <div id="cmd-container"></div>
+    <a href="https://nani.ooo/" id="nani-link" target="_blank">⌘ nani</a>
+    <a href="https://x.com/nani__ooo" id="x-link" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227">
+        <path
+          d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+        />
+      </svg>
+    </a>
+    <script>
+      function createSymbol(count = 70) {
+        const container = document.getElementById("cmd-container");
+        container.innerHTML = ""; // Clear existing symbols.
+        const containerHeight = document.documentElement.scrollHeight;
+        for (let i = 0; i != count; ++i) {
+          const cmd = document.createElement("div");
+          cmd.className = "cmd";
+          cmd.textContent = "⌘";
+          cmd.style.color = [
+            "rgba(255, 255, 255, 0.5)",
+            "rgba(255, 0, 0, 0.5)",
+            "rgba(0, 255, 255, 0.5)",
+            "rgba(255, 255, 0, 0.5)",
+          ][Math.floor(Math.random() * 4)];
+          cmd.style.top = Math.floor(Math.random() * containerHeight) + "px";
+          cmd.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+          cmd.style.animationDuration = Math.random() * 2 + 1 + "s";
+
+          container.appendChild(cmd);
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        const initialSymbolCount = Math.floor(
+          (window.innerWidth * document.documentElement.scrollHeight) / 15000
+        );
+        createSymbol(initialSymbolCount);
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const initialSymbolCount = Math.floor(
+          (window.innerWidth * document.documentElement.scrollHeight) / 15000
+        );
+        createSymbol(initialSymbolCount);
+      });
+    </script>
+  </body>
+</html>
